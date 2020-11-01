@@ -8,7 +8,7 @@ provider "azurerm" {
 module "full-webapp" {
   source  = "app.terraform.io/devops-mindset/full-webapp/azurerm"
   version = "0.0.1"
-  name = "Fuel"
-  location = "eastus"
+  name = var.name
+  region = var.location
   # insert required variables here
 }
