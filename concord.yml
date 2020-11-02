@@ -11,7 +11,7 @@ flows:
         remote:
           hostname: "app.terraform.io"
           organization:  "devops-mindset"
-          token: "h8taTsoiZGO2Ww.atlasv1.u6GmyfOfbZ8rgM3KZSRredgBMGRqD0m6pW85N4Zu7GVgmCMDZ0lwE2zUDtOpYS3Qazs"
+          token: ${crypto.decryptString("r52Jx2RORLf1HFXiFt+fBmK0FgnUIkjUlpwXDpH4atqgEtiHqFjpZ6xG+1FphwH/WDOBoWxtxmEhKkfWbT8IBkuAKRYTLOumub1tvVfav6cXU5sJxpEBwXOrRlqd4uH0")}
           workspaces: 
             name: "Concord"
 
