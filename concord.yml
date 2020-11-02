@@ -32,9 +32,9 @@ flows:
     then:
       - throw: "The plan was not approved"
    
- - task: terraform
-   in:
-      action: apply
-      plan: "${result.planPath}"
+  - task: terraform
+    in:
+       action: apply
+       plan: "${result.planPath}"
 
 
