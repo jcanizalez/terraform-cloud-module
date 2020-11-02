@@ -36,5 +36,12 @@ flows:
     in:
        action: apply
        plan: "${result.planPath}"
+       backend:
+        remote:
+          hostname: "app.terraform.io"
+          organization:  "devops-mindset"
+          token: ${crypto.decryptString("r52Jx2RORLf1HFXiFt+fBmK0FgnUIkjUlpwXDpH4atqgEtiHqFjpZ6xG+1FphwH/WDOBoWxtxmEhKkfWbT8IBkuAKRYTLOumub1tvVfav6cXU5sJxpEBwXOrRlqd4uH0")}
+          workspaces: 
+            name: "Concord"
 
 
