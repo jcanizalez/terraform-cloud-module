@@ -7,7 +7,6 @@ flows:
   - task: terraform
     in:
       action: plan
-      toolUrl: https://releases.hashicorp.com/terraform/tfe-configured-version/terraform_tfe-version_linux_amd64.zip
       backend:
         remote:
           hostname: "app.terraform.io"
