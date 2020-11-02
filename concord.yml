@@ -15,12 +15,12 @@ flows:
           workspaces: 
             name: "Concord"
 
-   - if: ${!result.hasChanges}
+  - if: ${!result.hasChanges}
       then:
         - log: "No changes planned, stopping..."
         - exit
     
-   - form: approvalForm
+  - form: approvalForm
       fields:
         - plan: { type: "string", readonly: true, value: "${result.output}" }
         - approved: { type: "boolean" }
@@ -28,11 +28,11 @@ flows:
         processId: "${txId}"
       yield: true  
 
-   - if: ${!approvalForm.approved}
+  - if: ${!approvalForm.approved}
       then:
         - throw: "The plan was not approved"
    
-   - task: terraform
+ - task: terraform
       in:
         action: apply
         plan: "${result.planPath}"
